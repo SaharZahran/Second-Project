@@ -1,0 +1,344 @@
+/*Google fonts*/
+
+@import url("https://fonts.googleapis.com/css2?family=Cairo:wght@400;600&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Style+Script&display=swap");
+
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+/*Start Navbar*/
+
+body {
+  font-family: "Cairo", sans-serif;
+  height: 150vh;
+  font-weight: bolder;
+  position: relative;
+  background-color: rgb(221, 221, 221);
+}
+.logo {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-items: center;
+  margin-top: 10px;
+}
+.logo h3 {
+  font-size: 15px;
+  color: #3b3b3b;
+  margin-top: 10px;
+  font-family: "Style Script", cursive;
+}
+ul {
+  list-style: none;
+}
+
+.container {
+  padding: 0 15px;
+  margin: 0 auto;
+}
+
+header .container .logo a i {
+  color: rgb(58, 58, 58);
+  font-size: 40px;
+}
+
+header .container .logo a:hover {
+  cursor: pointer;
+}
+
+/*Medium Screen*/
+@media (min-width: 768px) {
+  .container {
+    width: 750px;
+  }
+  header .container nav .toggle {
+    display: none;
+  }
+}
+
+/*Large Screen*/
+@media (min-width: 992px) {
+  .container {
+    width: 970px;
+  }
+}
+/*X-Large Screen*/
+@media (min-width: 1200px) {
+  .container {
+    width: 1170px;
+  }
+}
+
+header {
+  background-color: rgba(220, 20, 60, 0.315);
+  width: 100%;
+  height: 85px;
+}
+
+header .container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  position: relative;
+  min-height: 70px;
+}
+
+header .container nav {
+  flex: 1;
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+}
+
+header .container nav .toggle {
+  color: #585858;
+  font-size: 20px;
+}
+
+@media (max-width: 768px) {
+  header .container nav #navList {
+    display: none;
+  }
+  header .container nav .toggle {
+    display: block;
+  }
+}
+
+header .container nav .toggle:hover + #navList {
+  display: flex;
+  flex-direction: column;
+  position: absolute;
+  top: 100%;
+  left: 0;
+  background-color: rgb(17, 17, 17, 0.4);
+  width: 100%;
+}
+
+header .container nav .toggle:hover + #navList li a {
+  color: aliceblue;
+  padding: 20px;
+  border-bottom: rgba(177, 174, 175, 0.404) 1px solid;
+}
+
+header .container nav ul {
+  display: flex;
+}
+
+header .container nav ul li a {
+  display: block;
+  padding: 30px 20px;
+  text-decoration: none;
+  font-size: 20px;
+  color: #585858;
+}
+
+header .container nav #navList li a.active,
+header .container nav #navList li a:hover {
+  color: white;
+  cursor: pointer;
+}
+
+/*End Navbar*/
+
+/*Start Showcase*/
+.showcase .container {
+    width: 100%;
+    height: 200px;
+    color: #fff;
+    padding-top: 10px;
+    background: url('../images/gallery.jpg');
+}
+.showcase .container h1, .showcase .container h3{
+    padding-left: 10%;
+}
+@media (max-width:570px) {
+    .showcase .container{
+        height: 200px;
+    }
+}
+@media (max-width:768px) {
+    .showcase .container h1, .showcase .container h3{
+        padding-left: 1%;
+    }
+}
+/*End Showcase*/
+
+
+/*Start Main */
+main {
+  height: 2200px;
+  width: 100%;
+  top: 50px;
+}
+
+main .container {
+    display: flex;
+    flex-wrap: wrap;
+    width: 100%;
+    align-items: center;
+    justify-content: center;
+    row-gap: 30px;
+    margin-left: 40px;
+    margin-top: 30px;
+}
+main .container img {
+    width: 350px;
+    height: 350px;
+}
+main .container .photo {
+    width: 33%;
+}
+main .container button {
+    font-size: 25px;
+    padding: 20px;
+    background-color: rgba(220, 20, 60, 0.418);
+    color: white;
+    border-radius: 0 20px 0 20px;
+    margin-right: 80px;   
+    margin-top: 10px; 
+}
+@media (max-width:768px) {
+    main {
+        height: 3000px;
+    }
+    main .container {
+        margin: 30px 5px;
+        column-gap: 45px;
+        row-gap: 35px;
+    }
+    main .container img {
+        width: 250px;
+        height: 300px;
+    }
+    main .container .photo {
+        width: calc(50% -10px);
+        margin-left: 2px;
+    }
+    main .container button {
+        margin: 50px 20px;
+    }
+}
+@media (max-width:570px) {
+    main {
+        height: 7000px;
+    }
+    main .container {
+        margin: 30px;
+    }
+    main .container img {
+        width: 350px;
+        height: 350px;
+    }
+    main .container .photo {
+        width: 100%;
+        margin-right: 55px; 
+    }
+    main .container button {
+        margin-right: 70px;
+    }
+}
+main .container button:hover {
+    background-color: #585858;
+    cursor: pointer;
+}
+/*End Main */
+
+/* Start Footer*/
+footer {
+  position: absolute;
+  top: 250px;
+  height: 250px;
+  background-color: #585858;
+  color: #eee;
+  position: relative;
+  padding: 20px;
+}
+
+@media (max-width: 768px) {
+  footer {
+    height: 360px;
+  }
+}
+@media (max-width: 570px) {
+  footer {
+    height: 500px;
+    flex-direction: column;
+    text-align: center;
+    justify-content: center;
+  }
+}
+
+footer .container .sections {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-evenly;
+}
+footer .sections .section {
+  padding: 10px;
+  width: calc(25% - 100px);
+}
+@media (max-width: 768px) {
+  footer .sections .section {
+    width: calc(50% - 10px);
+  }
+}
+@media (max-width: 570px) {
+  footer .sections .section {
+    width: 100%;
+  }
+}
+footer .sections .section .logo i,
+footer .sections .section .logo h3 {
+  font-size: 60px;
+  color: rgba(0, 0, 0, 0.644);
+}
+
+footer .sections .section .logo h3 {
+  font-size: 20px;
+}
+footer .sections .section .accounts ul {
+  display: flex;
+  margin-top: 10px;
+}
+footer .sections .section .accounts ul li {
+  margin: 2px;
+}
+footer .sections .section .accounts ul li i{
+  color:#eee;
+}
+@media (max-width: 768px) {
+  footer .sections .contacts {
+    position: relative;
+    left: 120px;
+  }
+}
+@media (max-width: 570px) {
+  footer .sections .section .accounts ul {
+    margin-left: 125px;
+  }
+  footer .sections .contacts {
+    position: relative;
+    left: 5px;
+  }
+}
+footer .rights {
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  width: 100%;
+  height: 70px;
+  background-color: rgb(31, 30, 30);
+}
+
+footer .rights p {
+  text-align: center;
+  color: white;
+  margin: 30px auto;
+  font-size: 1rem;
+}
+
+/*End Footer*/

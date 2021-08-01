@@ -50,6 +50,8 @@ header .container .logo a:hover {
 cursor: pointer;
 }
 
+
+
 /*Medium Screen*/
 @media (min-width: 768px) {
   .container {
@@ -101,9 +103,13 @@ header .container nav .toggle {
   font-size: 20px;
 }
 
-@media (max-width:768px) {
+
+@media (max-width: 768px) {
   header .container nav #navList {
     display: none;
+  }
+  header .container nav .toggle {
+    display: block;
   }
 }
 
@@ -197,42 +203,7 @@ header .container nav #navList li a:hover {
 .slider .text h2 {
   margin-bottom: 20px;
 }
-.slider .text h2::after{
-  content: '';
-  width: 105px;
-  height: 2px;
-  background-color: #585858;
-  position: absolute;
-  top: 480px;
-  right:327px
-}
 
-@media (max-width: 768px) {
-  .slider .text {
-    width: 100%;
-  }
-  .slider .text h2::after{
-    content: '';
-    width: 105px;
-    height: 2px;
-    background-color: #585858;
-    position: absolute;
-    top: 630px;
-    right:333px
-  }
-}
-@media (max-width: 570px) {
-
-  .slider .text h2::after{
-    content: '';
-    width: 105px;
-    height: 2px;
-    background-color: #585858;
-    position: absolute;
-    top: 515px;
-    left:155px
-  }
-}
 
 .slider .fas {
   position: absolute;
@@ -277,7 +248,7 @@ header .container nav #navList li a:hover {
 
 /*End Slider*/
 
-/* Start Services Section */
+/* Start Technologies and skills Section */
 .services {
   margin-top: 50px;
   background-color: #eee;
@@ -298,6 +269,42 @@ header .container nav #navList li a:hover {
 
 .services .text h2 {
   margin-bottom: 20px;
+}
+.services .text h2::after{
+  content: '';
+  width: 230px;
+  height: 2px;
+  background-color: #585858;
+  position: absolute;
+  top:800px;
+  left:645px
+}
+
+@media (max-width: 768px) {
+  .services .text {
+    width: 100%;
+  }
+  .services .text h2::after{
+    content: '';
+    width: 230px;
+    height: 2px;
+    background-color: #585858;
+    position: absolute;
+    left: 270px;
+    top:1100px;
+  }
+}
+@media (max-width: 570px) {
+
+  .services .text h2::after{
+    content: '';
+    width: 230px;
+    height: 2px;
+    background-color: #585858;
+    position: absolute;
+    left: 95px;
+    top:810px;
+  }
 }
 .services .text p {
   line-height: 2;
@@ -322,7 +329,8 @@ header .container nav #navList li a:hover {
 
 .services .services-section .service:hover {
   transform: translateY(-20px);
-  box-shadow: 4px 4px 2px rgb(65, 62, 63);
+  box-shadow: 5px 5px 3px rgb(65, 62, 63);
+  cursor: pointer;
 
 }
 
@@ -350,11 +358,11 @@ font-size: 25px;
     margin-bottom: 30px;
   }
 }
-/* End Services Section */
+/* End Technologies and skills Section */
 
 /*Start Footer*/
 footer {
-  height: 300px;
+  height: 250px;
   background-color: #585858;
   color: #eee;
   position: relative;
@@ -363,13 +371,13 @@ footer {
 @media (max-width:768px) {
 
   footer {
-    height: 400px;
+    height: 380px;
   }
 }
 @media (max-width:570px) {
 
   footer {
-    height: 700px;
+    height: 520px;
     flex-direction: column;
     text-align: center;
     justify-content: center;
@@ -413,6 +421,9 @@ footer .sections .section .accounts ul{
 }
 footer .sections .section .accounts ul li{
   margin: 2px;
+}
+footer .sections .section .accounts ul li i{
+  color:#eee;
 }
 @media (max-width: 768px) {
   footer .sections .contacts {
